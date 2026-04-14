@@ -1,4 +1,4 @@
 #!/usr/bin/env python3
 
-def transpileEquals(match: str) -> str:
-    return f'{match.group(1)} = "{match.group(2)}"'
+def transpileEquals(groups: tuple[str, ...]) -> str:
+    return f"{groups[0]} = {repr(groups[1])}"
