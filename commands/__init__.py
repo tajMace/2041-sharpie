@@ -1,11 +1,6 @@
 #!/usr/bin/env python3
 
-from .hashbang import setHashbang
-from .echo import transpileEcho
-from .equals import transpileEquals
+from .rules import RULES
+from .splitComment import splitComment
 
-TRANSPILERS = [
-    "hashbang": setHashbang,
-    "echo": transpileEcho,
-    "equals": transpileEquals,
-]
+__all__ = ["RULES", "splitComment"]
